@@ -1,0 +1,56 @@
+.rule{
+  font-family: 'Fira Code', monospace;;
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--colorText);
+  &__one &__num.borde {
+    position: relative;
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      z-index: 1;
+    }
+    &::before{
+      top: 0;
+      width: 100%;
+      height: calc(100% * 2.02);
+      border: 16px solid var(--colorBorde);
+    }
+    &::after {
+      content: "+";
+      top: 100%;
+      left: -25%;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      font-size: 32px;
+      line-height: 1.5;
+      text-align: center;
+      background-color: var(--colorBorde);
+      color: var(--colorTextAccent);
+      transform: translateY(-50%);
+    }
+  }
+  &__num{
+    background-color: var(--colorRuleOne);
+    border: 1px solid var(--colorEqual);
+    &.equal{
+      background-color: var(--colorEqual);
+      color: var(--colorTextAccent);
+      position: relative;
+      &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: calc(100% * 2.02);
+        border: 12px solid var(--colorEqual);
+      }
+    }
+  }
+  &__two &__num{
+    background-color: var(--colorRuleTwo);
+  }
+}

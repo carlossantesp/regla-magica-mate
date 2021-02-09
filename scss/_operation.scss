@@ -1,0 +1,32 @@
+.operation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  &__op{
+    color: var(--colorTextFooter);
+  }
+  &__num {
+    padding: 1rem;
+    width: 10rem;
+    text-align: center;
+    margin: 0 3rem;
+    background-color: var(--colorNumInput);
+    span{
+      display: block;
+      background-color: var(--colorTextFooter);
+      padding: 1rem 0;
+    }
+    input[type="number"] {
+      width: 100%;
+      height: 100%;
+      border: none;
+      font-size: 5rem;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    &.result {
+      background-color: var(--colorNumResult);
+    }
+  }
+}
